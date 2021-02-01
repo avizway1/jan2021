@@ -1,0 +1,86 @@
+https://github.com/avizway1/jan2021
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-lnidepdv-RV4ODyh7jC9x_u3YK4jBYQ
+
+Block Based Storage : Used/designed to run the OS. : Servers : EBS/InstanceStore : EC2
+
+Object Based Storage : Designed to store the objects.. We cannot install anything.. We cannot run any Applications / OS.. : Store any file format.. : Gdrive/Dropbox/onedrive
+: S3
+
+Network Based Storage : Storage over the network.. SAN/NAS : EFS & FSx
+
+S3 : Simple Storage Service : 
+--> We have Buckets. We can store all the data in buckets.
+--> Bucket name should be unique across the globe.
+
+S3 Bucket Naming limitations:
+--> Min Char 3, Max 63 Char..
+--> Should not contains Capital Letters
+--> Should not start with .
+--> Should not end with .
+--> No Adjesent ..
+--> Should not resemble IP Address Format
+
+Free Tier : S3
+--> 5 Gb Standard Storage.. 
+--> 2000 PUT Operation / 20,000 GET Operations
+
+______________________________________________________________________________________
+
+D: 01/02/2021
+
+--> S3 : No Pre-Provisioning required.
+--> We will get charged based on the data we actually stored.
+--> Based on ACcess Patterns we need to choose the right storage class.
+
+S3 Standard : Frequently Accessed Data : AZs >= 3 data spreads in backend.. 
+Availability : 99.99%  Durability : 99.999999999 (11 9s).. 
+Data availbale immediatly.. 
+
+S3 Standard-IA : Less Freq accessed data..   AZs  >=3 AZs.. 
+Availability : 99.9%  Durability : 99.999999999 (11 9s).. 
+Data availbale immediatly.. 
+
+OneZone-IA : Less Freq accessed data..   AZs -->  1 AZs.. 
+Availability : 99.5%  Durability : 99.999999999 (11 9s).. 
+Data availbale immediatly.. 
+
+Glacier : Archive the data.. AZs  >=3 AZs.. 
+Data will not be availbale immediatly.. Initialise data restoration to view the data.. 
+Restoration : Min- Hrs...  
+(Standard Restore/retrival : 3-5 Hrs
+Expedited Restore/retrival : 1-5 Min (Less than 250 mb)
+Bulk restore : Hrs 5-12 Hrs)
+
+Glacier Deep Archieve: Archive the data.. AZs  >=3 AZs.. 
+Data will not be availbale immediatly.. Initialise data restoration to view the data.. 
+Restoration : Hrs... 
+
+Intelligent tier : If we have unknown access patterns for our data.. Long-lived data with changing or unknown access patterns... AZs  >=3 AZs.. 
+
+Reduced redundancy Storage : RRS : Not Recommanded..!!
+Durability : 99.99%.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
