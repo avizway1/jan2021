@@ -1,0 +1,317 @@
+AWS CLoud Service PRovide..!!! 
+
+Cloud COmputing : SHare the infra to multiple clients.
+
+2003 : Chris Pinkman and Benjamin Black.. WHitepapers.. 
+2004 : SQS : Simple Queue Service.. 
+2006 : AWS Officially Launched.. 
+
+
+Infra services = servers, database, network, storage..!!!
+
+Pay-as-you-go : Pay for the resources you actually use..!!!
+
+CAPEX : Capital Expendature : FIrst you need to invest and Build the Infra.. NO CAPEX..!! 
+OPEX : Operation Expendature : TO operate the Infra, we need to spend.. Less OPEX..!!
+
+Public Cloud : Open for everyone.!!
+
+
+Where this Cloud Infra existed.??
+AWS GLobal Infrastructure: 
+
+Regions : 24 Regions.. Physical Location or GeoGraphical Location.. No Technical defination..!!
+Every Region Contains Min of 2 AZ..
+
+Mumbai : ap-south-1
+Hyderabad : ap-South-2 : COming Soon.. 3 DC..
+N Virginia : us-east-1
+Frankfort : eu-central-1
+
+
+AZ / Availability Zone : Data Centre or combination of Multiple DC...!! Every AZ connects with Another AZ.. With Multiple Backbone network connectivity..!! 
+77 AZs across the globe..
+Mumbai : 3 AZ : ap-south-1a / 1b / 1c
+
+
+PoP Locations : Point of PResence : EDGE Locations : CDN (Content Delivery Network) : CLoudfront..
+220+ pop locations.. 
+
+
+
+DO we need to learn Linux.??
+Basic Linux added advantage to your profile.  2-3 Sessions.. Free LINUX Course..
+
+Do i need to have Any Programing language exp.??
+NO..!!! 
+AWS Developer : AWS + (Java / .nodeJS / Python / .net core / go / Ruby / Typescript)(JSON/YAML)... CDK (CLoud Devleopemt Kit)..  Lambda and Cloudformation
+AWS SA / SyOps / Practionar : Operation support.. : No Prog required..!!
+
+Am a DBA/NetworkAdmin/ SysAdmin / Storage Admin.. How this course helps..!!
+++++ Takes your career to next level..!!
+
+WHo is target audience.?
+ANyone.. Upgrade to latest technology..!!
+
+
+DO we have any Realtime Proj.?? 
+Realtime scenarios.. Simulated env to Ent level networks..!! 
+WIl login and show you an env..!!!!
+
+What certifictions this course covers..??
+Associates and Foundation: AWS Cloud Practitioner, SA-A, SysoPs and Developer..!!!
+
+How many exp we can add to profile..!!!
+3-4 Yrs..!! 
+
+35 Sessions - 40 Sessions
+
+
+
+______________________________________________________________________________________
+
+D: 26/01/2021
+
+
+Regions : 24 --> 20
+AZs : 77
+pop / CDN : 220+
+
+
+2 --> us-gov-cloud --> Signup  : HIPPA/Fedramp/pci dss.. 
+2 --> china regions --> Ninxia (nwcd) & bejing (sinnet).. 
+
+
+Hyd : Server : store data : MUmbai : 
+
+Mumbai Region : ap-south-1
+N Virginia : us-east-1
+
+
+______________
+
+--> AWS Acocunt FREE
+
+https://aws.amazon.com/free
+
+Email address : valid email 		
+Password : 
+COnfirm Password : 
+Account Name : 
+
+Contact Information : 
+Name, Address, Ph number		
+
+Payment Information : 
+CC/DC inforamtion : TO validate the card : 2 INR / 1$ : Refund this.. 
+Visa / Master Card / AMEX 		
+
+AWS Free Tier limitation : 12 Months : 95% services Free tier eligible in this course
+ec2 : Servers : 750 Hrs
+s3 : Storage : 5 gb storage
+RDS : Databases : 750 Hrs
+
+
+Verify your Identity : 
+Captcha, Phone number : You'll get a call from AWS.. Answer the call..
+
+XXXX (4 Digit pin) --> Enter the XXXX pin.. 
+
+
+--> Choose a Support Plan : 
+
+1) Account and Billing related
+2) Service Limit Increase
+3) Technical SUpport/Assistance
+
+
+Basic SP : 1 & 2 24x7 Support..  3 --> No Technical Support.. Cost : FREE
+AWS Knowledge Base Articles.. AWS Developer forums.. 
+
+Developer SP : 1 & 2 24x7 Support.. 3 --> YES.. 12-24 email local Business Hours support.. Cloud Support Associate provides the support..  Cost : 29$/Month
+One PRimary Contact can raise ticket/incident/ Unlimited tickets..!!!
+Case Severity : 
+General guidelines : <24 Hrs
+System impaired : < 12 Hrs
+
+Business SP : 1 & 2 24x7 Support.. 3 --> YES.. 24x7 Phone, Email and Chat support..
+Cloud SUpport Engineer.. Any use can raise incident/ Unlimited incidents..
+COST : 100$ / Month
+Case Severity : 
+General guidelines : <24 Hrs
+System impaired : < 12 Hrs
+Production System Impaired : < 4 Hrs
+Production System Down : < 1 Hr
+
+Enterprise SP : 1 & 2 24x7 Support.. 3 --> YES.. 24x7 Phone, Email and Chat support..
+Cloud SUpport Engineer.. Any use can raise incident/ Unlimited incidents..
+COST : 15,000 $ / Month
+Case Severity : 
+General guidelines : <24 Hrs
+System impaired : < 12 Hrs
+Production System Impaired : < 4 Hrs
+Production System Down : < 1 Hr
+Business Critical system down : <15 Min
+Dedicated TAM / Technical Account Manager from AWS allocated to our Org.
+Annual Operational revirews and Architectural reviews..  AWS Trainings..!!
+
+______________________________________________________________________________________
+D: 27/01/2021
+
+email address : 1 AWS account:  --> Root User : Account owner that performs tasks requiring unrestricted access.
+
+https://aws.amazon.com/console
+aws.com
+
+AWS always recommends to enable MFA on our root accounts..!!! Additional security.
+**Enterprise : You won't get any change to login as root user.
+
+ENable MFA : Click on "Acocunt name" --> "My Security Cred"
+Virtual MFA device : Smartphones (Google authenticator/ microsoft auth/ authy 2-fact)
+Hardware MFA device : we need to purchase suported physical device.. 
+U2F security key : More secured option.. (Yuby2Key)
+
+
+_____
+
+Project X : 
+
+3 Members : root credentials..!!! 
+--> We follow "Least Privilages mechanism" in AWS.
+ 
+TL 	:  IAM User with Admin permissions : Avinash_T
+Servers :  ec2 : IAM User with EC2 Full Access : ec2user
+Storage :  S3  : IAM User with S3 Full Access : s3user
+
+
+IAM : Identity and Access Management : 
+
+Username : ec2user
+
+AWS access type:
+--> Management console access : GUI : Username, Password and COnsoleLogin : browser
+--> Programatic Access : CLI : AccessKeyID and SecretAccessKey : cli tools / sdk/api..
+
+Set permissions : 
+
+Policy : DOcument that contains set of permissions on AWS environment.
+
+
+
+Task : Create an IAM user, Provide S3FUllAccess, Login and verify his access on s3 and ec2/iam. : NO ACCESS on EC2/IAM.
+
+Task 2 : Create an IAM User, Provide "AdministratorAccess", Try to Access "Billing Information".
+** Provide Billing access to This IAM User.
+
+______________________________________________________________________________________
+
+D: 28/01/2021
+
+Requirement : IAM User needs administrator Access on all the services.. But not on S3. 
+
+Policy : Document contains set of permissons. Writtens in JSON format.
+
+AWS managed : Provided by AWS. Based on Services we will get this policy.
+AWS managed - job function : Provided by AWS. Based on standard JOB Roles.
+Customer managed : Created by CUstomer. 
+
+
+Admini: Provide full access on all resources.. 
+Deny S3 : Deny permissions on S3 
+	|
+	|
+	V
+Access S3 = Allow /Deny
+
+Explicit DENY : If you allow 100 times, but you deny only 1 time in between = DENY
+
+
+Policy Simulator : Evaluates the permissions of an IAM user. 
+
+__
+
+To track all IAM user activities: AWS CLoudTrail 
+Cloudtrail : Logging service on AWS, Enabled by default. It stores last 90 Days logs.
+
+_
+
+Task : Create a Policy, That can allow an IAM user to Activate MFA himself.
+
+
+_____________________________________________________________________________________
+
+D: 29/01/2021
+
+
+Inline Policy : 
+
+
+--> If we choose "Programatic Access", We will get AccessKeyID" and "SecertAccessKey".
+--> We cannot generate same again.
+--> For an IAM user, we can have max of 2 Keypauirs.
+
+
+
+
+________________________________________________________________________________
+
+Storage :
+
+Block Based Storage : Used/designed to run the OS. : Servers : EBS/InstanceStore : EC2
+
+Object Based Storage : Designed to store the objects.. We cannot install anything.. We cannot run any Applications / OS.. : Store any file format.. : Gdrive/Dropbox/onedrive
+: S3
+
+Network Based Storage : Storage over the network.. SAN/NAS : EFS & FSx
+
+
+S3 : Simple Storage Service : 
+--> We have Buckets. We can store all the data in buckets.
+--> Bucket name should be unique across the globe.
+
+S3 Bucket Naming limitations:
+--> Min Char 3, Max 63 Char..
+--> Should not contains Capital Letters
+--> Should not start with .
+--> Should not end with .
+--> No Adjesent ..
+--> Should not resemble IP Address Format
+
+
+Free Tier : S3
+--> 5 Gb Standard Storage.. 
+--> 2000 PUT Operation / 20,000 GET Operations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
