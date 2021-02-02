@@ -62,6 +62,45 @@ Reduced redundancy Storage : RRS : Not Recommanded..!!
 Durability : 99.99%.. 
 
 
+____________________________________________________________________________________
+D: 02/02/2021
+
+https://avinash11.s3.ap-south-1.amazonaws.com/s3.txt
+Https://bucketname.s3.regionname.amazonaws.com/objectname
+
+https://s3.regionname.amazonaws.com/bucketname/objectname	--> If we have . in bucket name
+
+
+Turn off the "Block public access" settings at bucket level. Then make object public. With URL we can access the objects.
+
+
+Versioning : If we enable versioning on s3 bucket.
+--> We will have multiple versioned objects.
+--> If we delete accidentally, We can restore the object.
+
+Most recent uploaded object = Latest Version / Current version.
+
+If we delete a Current/latest version, we will get a delete market (vision:hide)
+
+If you need to undo the delete action, you can delete the delete markers. We will get the object back to s3 bucket.
+
+____
+
+SRR/CRR : DR (Disaster Recovery) Solution
+Same region replication : keep another copy of our data in same region bucket.
+Cross region replication : keep another copy of our data in another region bucket.
+
+--> Existing data will not be replicated to destination bucket.
+--> All the ongoing/future uplaods will replicate to destination bucket.
+
+Task : Create multiple buckets in mumbai region.. Configure Same Region replication between these buckets.
+
+Task : Explore bucket versioning.
+
+________
+
+Life Cycle Management rules : 
+
 
 
 
