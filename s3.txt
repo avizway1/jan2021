@@ -99,17 +99,35 @@ Task : Explore bucket versioning.
 
 ________
 
+D: 03/02/2021
+
 Life Cycle Management rules : 
 
 
+CLI : 100gb --> Upload --> Multipart upload..   chunks (small parts)
+
+S3 Static website hosting : 
+--> S3 supports only static website hosting. 
+--> Bucket name = Domain Name
+--> Your bucket data should be publicly accessable.
+
+http status codes :
+
+2xx : OK/Success
+3XX : Redirection error
+4XX : Client side error
+5XX : Server Side error
+
+___
+
+Tags : 
 
 
+Intelligent-Tiering Archive configurations: 
+--> Enable objects stored in the Intelligent-Tiering storage class to tier-down to the Archive Access tier or the Deep Archive Access tier which are optimized for objects that will be rarely accessed for long periods of time.
 
 
-
-
-
-
+Whatever the file accessed in last 90 days, it will be in IT only.. But iof the file not accessed in last 90 days it will be moved to IT-Archive.. 
 
 
 
