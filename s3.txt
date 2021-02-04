@@ -57,6 +57,8 @@ Data will not be availbale immediatly.. Initialise data restoration to view the 
 Restoration : Hrs... 
 
 Intelligent tier : If we have unknown access patterns for our data.. Long-lived data with changing or unknown access patterns... AZs  >=3 AZs.. 
+	--> IT-Archive
+	--> IT-Deep Archive
 
 Reduced redundancy Storage : RRS : Not Recommanded..!!
 Durability : 99.99%.. 
@@ -128,6 +130,52 @@ Intelligent-Tiering Archive configurations:
 
 
 Whatever the file accessed in last 90 days, it will be in IT only.. But iof the file not accessed in last 90 days it will be moved to IT-Archive.. 
+
+
+_____________________________________________________________________________________
+
+D: 04/02/2021
+
+In-transit Encryption : SSL/TLS 
+--> S3 enabled with InTransit encryption.
+
+Server Side Encryption (SSE)/At-Rest Encryption
+
+SSE - S3 : An encryption key that Amazon S3 creates, manages, and uses for you. Whoever have valid permissions in s3 platform, they can view the data. (FREE TIER) 
+
+SSE - KMS : 
+amazon managed keys:   aws/s3 :  In KMS FOr s3, we will get a key.. An encryption key that Amazon Key Management Service creates, manages, and uses for you. Whoever have valid permissions in s3 platform, they can view the data. (FREE TIER) 
+
+Customer Managed Keys:	aws/customkey by KMS : We can generate a Key by KMS, KMS Manages the Key creation, managing... Key Material is KMS responsibiity.
+
+SSE - C : We need to provide the key material to aws KMS service.. KMS manages the encryption and decryption.. 
+
+
+Client Side Encryption (CSE): 
+--> Before uploading the data, we can encrypt and we can send/store encrypted data in s3 platform.
+
+____
+
+Key Users : Who can use the key to decrypt the data.
+Key Administrators : Who can administrate the key.. Delete/provide permissions..
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
+
+
+________
+
+Server access logging : Enable logging for a particular bucket. 
+
+Object Lock : Additional layer of security for our s3 data. Protect data from delete operations.
+
+Governance : Users with specific IAM permissions can overwrite or delete protected object versions during the retention period.
+
+Compliance
+No users can overwrite or delete protected object versions during the retention period.
+
+
+
 
 
 
