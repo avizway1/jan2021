@@ -169,19 +169,57 @@ Server access logging : Enable logging for a particular bucket.
 
 Object Lock : Additional layer of security for our s3 data. Protect data from delete operations.
 
-Governance : Users with specific IAM permissions can overwrite or delete protected object versions during the retention period.
+--> Governance : Users with specific IAM permissions can overwrite or delete protected object versions during the retention period.
 
-Compliance
-No users can overwrite or delete protected object versions during the retention period.
-
+--> Compliance : No users can overwrite or delete protected object versions during the retention period.
 
 
+______________________________________________________________________________________
+
+D: 05/02/2021
+
+IAM USer 1			IAM User 2
+
+ARN : Amazon Resource Name : 
+			
+PutObject : Upload
+GetObject : view/download
+
+Effect : ALLOW / DENY : Deny
+Principal : For what IAM user/group : arn:aws:iam::518084852393:user/s3user
+Actions : What do you want to deny/allow : PutObject
+On what resource ARN : S3 Bucket ARN : arn:aws:s3:::avinash11/*
+
+If the action is Object level we need to add /*
+If the action is bucket level, Just provide the ARN.
 
 
+Task : IAM User 1 have it's own bucket..     (bucket 1 = user 1)
+IAM User 2 should see only his allocated buckets.. (bucket 2 = usr 2)
 
 
+Cross-origin resource sharing (CORS) : Run scripts in remote domain and deliver/load it to the clients.
 
 
+Event notifications : When any particular operation happend on our aws env, we can trigger another service. (EMail: SNS)
+
+--> SNS (Simple Notifications Service)
+--> SQS (SImple Queue Service)
+--> Lambda
+
+
+SNS : Create a TOPIC : Add Subscribers : (Modify the "AccessPolicy" to everyone while creating the SNS topic).
+
+
+Transfer acceleration : we can use Edge locations to upload / download the data to this bucket if we enable transfer accelereration.
+
+
+aws s3 cp filename --endpoint trfaccelerationenedpoint
+
+Requester pays : Instead of bucket owner, WHo is accessing the data, he will get charged. 
+
+
+--> Versioning, Life cycle rule, CRR/SRR, Encryption, Bucket Policy... 
 
 
 
