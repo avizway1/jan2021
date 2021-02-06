@@ -221,6 +221,33 @@ Requester pays : Instead of bucket owner, WHo is accessing the data, he will get
 
 --> Versioning, Life cycle rule, CRR/SRR, Encryption, Bucket Policy... 
 
+________________________________________________________________________________________
+
+D: 06/02/2021
+
+In AWS , CloudWatch is designed to monitor the resources.
+
+Inventory configurations : Complete report about the S3 bucket.
+
+Storage Class Analysis : help you decide when to transition objects to the to the appropriate storage class.
+
+How to access S3 platform with 3rd party applications.?
+S3 Browser, Cyberduck, Cloudberry explorer, Winscp
+
+
+How to Import/Export data to s3 platform.?
+
+Snowcone	: 8 TB
+Snowball edge	: 50-100TB
+Snowmobile	: 100 PB
+
+
+AWS Direct Connect : A dedicated conenction between AWS env and our On-prem environment.
+Without internet connectivity we can access all our AWS resources.
+--> JIO/Sify/Airtel/TLC
+
+
+
 
 
 
