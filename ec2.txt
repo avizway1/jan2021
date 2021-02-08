@@ -1,0 +1,51 @@
+EC2 : Elastic Compute Cloud : 
+
+box = Servers = Instance = Azure VM = Virtual Machine = GCP Engines
+
+Advantages with ec2 : 
+--> pay-as-you-go
+--> Project : 10 cust.. Future requirements.. 100 cust.. 1000 cust++ : 200cus : 10 cust
+
+
+On-Demand ec2 instances = Testing application for the first time.. No predictable/stable workloads.. If you are not sure about the config requirement..!!!
+Price: /sec (with min of 60 Sec).. 
+
+Reserved ec2 instances = stable / predictable workloads for longer durations.. For long turm run..  Duration : 1 Yr / 3 Yrs.. We need to choose/flinalise config.. 
+
+	Standard RI : We canot change the configuration during the period.
+	Convertable RI : We can upgrade the configuration.. 
+	Schedured RI : repeated/persistant requests for the longer duration (Ex: Need a server from MON-FRI only, but for 3 Yrs)
+
+Pricing : 
+	--> Full Upfront : pay 100% while purchasing.
+	--> Partial Upfront : pay 30-50% while purchasing.. remaing pay monthly basis with reduced pricing.
+	--> No upfront : Pay everything monthly basis.
+
+
+Spot ec2 instances = If we are flexible to stop/start instances.. We need to bid our pricing against AWS pricing.. We can test application with high configs at low price..
+
+--> If price increased, AWS terminated our instance, we no need to pay partial hours..
+1:45 Min : AWS Terminated : 1 Hr only
+1:45 Min : You terminated : 1:45 min
+
+
+Tenancy:
+Shared tenancy : Underlying hardware will be shared with multiple customers.
+Dedicated tenancy : Underlying resources will be delivered to only one customer.
+	--> Dedicated Instance : 
+	--> Dedicated host : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
