@@ -35,6 +35,70 @@ Dedicated tenancy : Underlying resources will be delivered to only one customer.
 	--> Dedicated Instance : 
 	--> Dedicated host : 
 
+____________________________________________________________________________________
+D: 09/02/2021
+
+EC2 is Region specific service.
+--> Mumbai (Primary)
+--> N Virginia (Secondary)
+
+
+FREE Tier : 
+750 Hrs/Month.. t2.micro.. Windows 
+750 Hrs/Month.. t2.micro.. Linux
+
+Storage : 30gb/Month
+
+
+Step 1: Choose an Amazon Machine Image (AMI)	: Operating System
+
+Step 2: Choose an Instance Type			: COnfiuration of server (CPU, Memory)
+
+General Purpose : stable perf of compute, Memory and Network resources.. : t2, t3, m5, m4
+Compute Optimized : High CPU utiliation..: c5, c6, c4
+Memory Optimized : More RAM memory perf.. : r4, r5, x1, z1
+GPU Optimised : More graphic perf.. P2, P3, G3, G4, F1
+Storage Optimized : More storage pef.. : d2, d3, i3en
+
+
+Shutdown behavior: Stop/Terminate : stop
+
+Step 3 : CHoose Storage
+
+Step 4 : Add required Tags (Applocation, Platform, Cost Center)
+
+Step 5 : Configure the Security Groups
+Ports : (0-65535)
+
+RDP : Windows : 3389 :   
+SSH : Linux : 22 : 
+Webserver : http : 80
+
+Step 6 : Review and launch. Create a Keypair..
+
+Public key (AWS Instance) and Private Key (We downloaded)
+
+Public IP : unique across the globe. Use public ip to get connect to the ec2 instance.
+
+Open run (windows + r) --> mstsc --> Enter.
+
+
+Stop and Start :
+Terminate : Deletes the instance.
+
+
+Task : Launch a Windows instance, Change the administrator password.. Logout from instance.. try to login to instance with Keypair given password..?? Allow/deny.??
+
+Task 2 : Make your instance as IIS Webserver and deliver the webpage to everyone.
+
+Task 3 : Create another user within our ec2 instance, provide the lcoal admin rights to that user and Take a Remote session with newly created user.
+
+
+
+
+
+
+
 
 
 
