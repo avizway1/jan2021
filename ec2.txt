@@ -91,8 +91,75 @@ Task : Launch a Windows instance, Change the administrator password.. Logout fro
 
 Task 2 : Make your instance as IIS Webserver and deliver the webpage to everyone.
 
-Task 3 : Create another user within our ec2 instance, provide the lcoal admin rights to that user and Take a Remote session with newly created user.
+Task 3 : Create another user within our ec2 instance, provide the local admin rights to that user and Take a Remote session with newly created user.
 
+
+____________________________________________________________________________________
+
+D: 10/02/2021
+
+Step 1 : Choose an AMI 			: Amazon Linux 2
+Step 2 : Choose an Instance type	: t2.micro
+Step 3 : Additional COnfig		: 
+Step 4 : Choose the Storage		: 8 gb
+Step 5 : Add the tags			: Max 50 tags/instance
+Step 6 : Configure the SG		: Linux : SSH : 22 : 0.0.0.0/0
+Step 7 : Review and launch using keypair: .pem
+
+
+How to connect to Linux Instance :
+Putty : COnvert the .pem to .ppk file  (First create a .ppk file in AWS, use it with Linux instance) (.ppk)
+GIT : Install git in your laptop and use git to connect (.pem)
+CMD : Enable OPENSSH in Windows 10 and we can use COmmand prompt to connect (.pem)
+
+Putty : https://putty.org/ and Download Putty and PuttyGen
+
+GIT : https://git-scm.com/downloads
+
+ssh -i keypair.pem ec2-user@publicipaddress
+ssh -i linuxkp2.pem ec2-user@13.233.204.179
+
+ssh -i "linuxkp2.pem" ec2-user@13.233.204.179
+
+_________________
+
+EBS VOlumes : 
+
+SSD : Solid State Drives : 
+HDD : Hard Disk Drives : 
+Magnetic (previous Generation) : 
+
+IOPS : Input and Output operations per Second
+root = COntains Instance Operating SYstem = General Purpose / Provisoned IOPS / Magnetic
+
+
+General purpose SSD : gp2 & gp3 : 
+Usecase : Low-Latency interactive applications.. Dev and Test Environment..  
+Size : 1 GiB - 16 TiB
+Max IOPS : 16,000
+We can choose required IOPS count if we are using GP3. But this feature is not avaiblble with gp2.
+
+Provisioned IOPS SSD : io1 & io2 :
+Usecase : If your application req more than 16,000 IOPS.. For Interactive Database workloads..  Production environment.. If you required specific IOPS count for your application.. 
+Size : 4 GiB - 16 TiB
+Max IOPS : 64,000 
+
+Magnetic : Cheapest Storage.. Less Freq accessed data.. 
+Usecase : Low Cost and less freq accessed instances..
+Size : 1 GiB - 1 TiB
+
+Througput Optimized HDD : st1 : 
+Usecase : Bigdata, Data warehousing, Log Processings
+Size : 125 GiB - 16 TiB
+Throughput : 500 MiB/Sec
+
+COld HDD : sc1 : 
+Usecase : same as st1 but Infrq accesed.. Low starage cost than st1..
+Size : 125 GiB - 16 TiB
+Throughput : 250 MiB/Sec
+
+
+FREE TIER : 30 Gb General Purpose GP2 and Magnetic
 
 
 
