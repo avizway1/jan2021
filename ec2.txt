@@ -162,6 +162,55 @@ Throughput : 250 MiB/Sec
 FREE TIER : 30 Gb General Purpose GP2 and Magnetic
 
 
+______________________________________________________________________________________
+
+D: 11/02/2021
+
+Permissions are too open / Unprotected keypair :
+chmod 400 keypair.pem
+
+EBS : 
+--> For ebs volume we can increase the size, but cannot decrease the size.
+
+Delete on Termination : If we terminate this ec2 instance, what should happens to this ebs volume.?? If DOT is enabled, Volume deltes automatically. 
+
+How to attach an ebs volume to an ec2 instance how to make it aviable.
+
+How to extend an existing volume.
+
+--> if your volume is in ap-south-1a subnet, you can associate this volume to only ap-south-1a ec2 instances only..!!!
+_____________________________________________________________________
+Status Checks : 
+--> System Status check : Any issues at physical interface level. : Fix: Stop/start
+--> Instance status check : Instance level issues. : reboot / get logs
+
+________________
+
+Stop and start ec2 instance will give us the Diff pubic ip addresses.
+rebooting instance won't change the public IP.
+
+13.127.88.188		--> 
+15.206.124.250		--> updated..!!
+
+65.1.44.78		--> EIP
+
+EIP : Elastic IP Address : Dedicated IP address allocated to our aws region. We can associate to any of the supported resources in this region. 
+
+
+ENI : Elastic Network interface : Additional network interface for our ec2 instance.
+Can we associate multiple IPs to an ec2 instance.?
+YES.. 
+--> Associate Multiple ENI (Elastic Network interface) cards.. 
+
+
+Task : Launch an ec2 instance in ap-south-1a.. Make it as webserver.. Add addiitonal nic card to your ap-south-1a instance.. 
+Launch another ec2 instance in ap-south-1b.. Test the ap-south-01. website output using Multiple Private IP address..?? 
+
+
+Task 2 : Launch an ec2 instance in ap-south-1a.. Add 1gb additional volumes after instance launch.. and make it aviailable. Write some data to newly added volume.
+
+Launch another ec2 instance ap-south-1b.. Get same copy of volume from ap-south-1a instance... and verify all data is existed or not..??
+
 
 
 
