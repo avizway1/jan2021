@@ -204,12 +204,53 @@ YES..
 
 
 Task : Launch an ec2 instance in ap-south-1a.. Make it as webserver.. Add addiitonal nic card to your ap-south-1a instance.. 
-Launch another ec2 instance in ap-south-1b.. Test the ap-south-01. website output using Multiple Private IP address..?? 
+Launch another ec2 instance in ap-south-1b.. Test the ap-south-01. website output using Multiple Private IP address..??
 
 
 Task 2 : Launch an ec2 instance in ap-south-1a.. Add 1gb additional volumes after instance launch.. and make it aviailable. Write some data to newly added volume.
 
 Launch another ec2 instance ap-south-1b.. Get same copy of volume from ap-south-1a instance... and verify all data is existed or not..??
+
+
+______________________________________________________________________________________
+
+D: 12/02/2021
+
+Snapshot : Backup copy of our EBS volumes.
+--> Point-in-time recivery copy.
+--> Amazon user S3 platform to store the backup copies (Not in your s3/ you won't find in your account).
+--> We can copy snapshot to another region. 
+--> We can share snapshot with another AWS account user. (you sharing from mumbai = Receiver also gets it in mumbai region only)
+--> We can make it public. 
+** --> We cannot share Encrypted snapshots, if it is encrypted with Default Encryption.
+
+Can we encrypt an existing volume..??
+Ans : We can take snapshot, from snapshot we can create a volume, while creating we can encrypt this..!!
+
+
+DLM : Data Lifecycle Manager : TO automate the instance/volume backup process, we use this.
+--> Using Tags on ec2 instance / ebs volumes we can list/filter the resources.
+
+Prod: 14 Days backups
+NonProd : 7 Days backups
+
+___
+
+Request : 20 ec2 instances.. AV, Customwallper, IIS Webserver, Keypair should not work, Custom users.. 
+
+
+Take one ec2 instance.. Perform all custom settins.. Take a Backup as an AMI --> From that AMI, how many instanes we launch, we will get all the custom settings.
+
+CIS : Center for Internet security : OS Benchmarks.. 
+
+
+Task : 
+
+
+
+
+
+
 
 
 
