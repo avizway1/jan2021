@@ -244,7 +244,47 @@ Take one ec2 instance.. Perform all custom settins.. Take a Backup as an AMI -->
 CIS : Center for Internet security : OS Benchmarks.. 
 
 
-Task : 
+_____________________________________________________________________________________
+
+D: 13/02/2021
+
+chmod 400 keypair.pem
+
+ssh -i keypair.pem ec2-user@pubicip
+
+whoami			--> as what user you are working
+sudo su			--> Switch root user
+pwd			--> Print working directory (It tells us where we are)
+ls			--> List files and directories
+ls -a			--> List all (inclusing hidden)
+cd			--> Change Directory
+mkdir 			--> Make Directory (create a folder)
+cp			--> COpy and paster (cp source destination)
+mv			--> move/ cut and paste  (we can even use for rename)
+
+
+VIM Editor : 
+
+vim filename	--> opens the file in vim editor
+
+Press I		--> Go to INSERT Mode
+Press ESC	--> Come out from Insert Mode
+:wq		--> Write and Quit the editor
+:q!		--> Quit without writing the changes
+
+rpm			--> redhat package manager  (Can't resolve dependencies)
+yum			--> Yellodog update manager
+
+yum install httpd -y
+service httpd start / stop / restart / status
+chkconfig httpd on
+
+webpages path : /var/www/html/	Create Index.html
+
+log path : /var/log/httpd/ accesslogs/errorlogs
+Config path : /etc/httpd/conf/	httpd.conf
+
+
 
 
 
