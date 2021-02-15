@@ -284,6 +284,35 @@ webpages path : /var/www/html/	Create Index.html
 log path : /var/log/httpd/ accesslogs/errorlogs
 Config path : /etc/httpd/conf/	httpd.conf
 
+______________________________________________________________________________________
+
+D: 15/02/2021
+
+lsblk 			--> List block based storages
+df -Th
+
+/dev/xvdf 	--> New volume name 
+
+mkfs -t xfs /dev/xvdf		--> Make filesystem
+mount /dev/xvdf newvolume	
+
+add an entry to /etc/fstab file..
+--> Get the entry from /etc/mtab file
+
+/dev/xvdf /home/ec2-user/newvolume xfs rw,relatime,attr2,inode64,noquota 0 0
+
+xfs_growfs -d /dev/xvdf			--> TO extend/increase existing volume size
+
+
+
+Task : Launch an Amazon Linux 2 instance.. Associate 1gb volume and make it available. Increase 1gb volume to 2gb.
+
+Create a goldenAMi of linux instance and verify all settings. 
+
+
+
+
+
 
 
 
