@@ -387,9 +387,30 @@ For ELB, We will get a DNS name.
 
 Task : Launch multiple instance in Multiple AZs.. Make it as webservers.. (1: do it manually, 2: Use Userdata to make it as webserver).. COnfigure Classic ELB and test it.
 
+____________________________________________________________________________________
+
+D: 17/02/2021
+
+Application ELB : http and https
+
+--> It's always recommended to run our instances across multiple AZs. 
 
 
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is my 8080 webserver </h1>" >> /var/www/html/index.html
 
+
+internet-facing : Output can be accesable from outside the world.
+internal : Output can be accesable only with AWS environment (with in this VPC)
+
+sticky sessions : Sesison stick to one of the target for the defined duration.
+
+
+Network ELB : Supports tcp, tls, udp.. Network Load Balancers are capable of handling millions of requests per second securely while maintaining ultra-low latencies.
+--> We can give a static ip address for our network elb.
 
 
 
