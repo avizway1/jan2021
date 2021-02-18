@@ -400,7 +400,7 @@ Application ELB : http and https
 yum install httpd -y
 service httpd start
 chkconfig httpd on
-echo "<h1>This is my 8080 webserver </h1>" >> /var/www/html/index.html
+echo "<h1>This is my Auto Scaling Group webserver </h1>" >> /var/www/html/index.html
 
 
 internet-facing : Output can be accesable from outside the world.
@@ -411,6 +411,41 @@ sticky sessions : Sesison stick to one of the target for the defined duration.
 
 Network ELB : Supports tcp, tls, udp.. Network Load Balancers are capable of handling millions of requests per second securely while maintaining ultra-low latencies.
 --> We can give a static ip address for our network elb.
+
+_______________________________________________________________________________________
+
+D: 18/02/2021
+
+Auto Scaling Group : 
+
+--> Golden AMI
+--> ELB
+--> Create an ASG
+	--> Create a Launch configuration
+	--> create an ASG
+
+Cloudwatch metrics : CPU, Network, Disk.. 
+We cannot monitor Memory utilisation using default metrics.
+
+AWS recommends to go with "Target Tracking policy", as it is intelligently managed by aws. It always uses average values.
+
+
+Task 1 :  Launch an ec2 instance, Configure an alarm on this ec2 instance, when CPU utilisation is >10% for 5 Minutes, Trigger to stop this ec2 instance.
+
+Task 2 : Launch an ec2 instance, Make it as webserver, Create a GoldenAMI of this instance, Create an ELB.
+
+Task 3 : Create an ASG, Set your desired count as 2.
+then.. add an alarm and test it. (low usage alarm)
+
+
+
+
+
+
+
+
+
+
 
 
 
