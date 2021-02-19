@@ -437,6 +437,61 @@ Task 2 : Launch an ec2 instance, Make it as webserver, Create a GoldenAMI of thi
 Task 3 : Create an ASG, Set your desired count as 2.
 then.. add an alarm and test it. (low usage alarm)
 
+_______________________________________________________________________________________
+
+D: 19/02/2021
+
+Shared storage in AWS: 
+
+EFS : Elastic File System :      FS : File system / File Share
+--> NFS(Network File System) v4.1 
+--> Supports only Linux OS.
+--> Centralised storage with SSD.
+--> We can mount this EFS to n number of the instnces.
+--> No PreProvisioning required.
+
+EFS Standard
+EFS IA
+
+General Purpose : Ideal for latency-sensitive use cases, like web serving environments and content management systems
+Max I/O : Scale to higher levels of aggregate throughput and operations per second
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-554b1f84.efs.ap-south-1.amazonaws.com:/ /var/www/html/
+
+to make it as a perm mount, we need to add an entry in /etc/fstab file.
+From where we get the entry: /etc/mtab
+
+fs-554b1f84.efs.ap-south-1.amazonaws.com:/ /home/ec2-user/sharedstorage nfs4 rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,hard,noresvport,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=172.31.16.94,local_lock=none,addr=172.31.26.1 0 0
+
+use the efs to maintain centralised webcontent for apache..?
+
+
+
+____
+
+For Windows, Shared storage service : FSx
+
+--> FSx works with SMB (Server Message Block) protocol..!!
+
+Create Directory : https://www.youtube.com/watch?v=RDlBoAHVmZs
+Create FSx : https://www.youtube.com/watch?v=s15ljWSTWY4
+
+___
+
+Task : Launch an ec2 instance, Make it as webserver, 
+Create an EFS.. Mount that EFS to launched efs instance.. Mount to /var/www/html/
+Create a GoldenAMI.. Use this Golden AMI with ASG..!!
+** Make sure you takes care about the security groups.
+__
+
+CLI
+
+https://aws.amazon.com/cli  
+
+aws --version
+
+
+
 
 
 
