@@ -490,17 +490,51 @@ https://aws.amazon.com/cli
 
 aws --version
 
+____________________________________________________________________________________
+
+D: 22/02/2021
+
+IAM : 
+--> Programatic Access : AccessKeyID and SecretAccessKey
+
+aws configure
+
+enter accesskeyid :
+enter SecretAccesskey :
+default region :
+output format : 
+--> 
+
+aws servicename commands
+
+aws s3 ls
+aws s3 ls s3://bucketname
+aws s3 cp sourcepath destinationpath
+aws s3 mv sourcepath destinationpath
+aws s2 sync sourcepath destinationpath
+
+presign : signed url with expired duration. 
+
+add --debug at end of the command to see how exactly command is executing.. 
+
+"https://awsclibuilder.com/home"
+
+__________
+
+https://www.udemy.com/course/jenkinswithavinash/?couponCode=FEB222
+
+https://www.udemy.com/course/linuxwithavinash/?couponCode=FEB222
+
+https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
+
+_________
 
 
+Task 1 : Launch an ec2 instance using cli.   (ami-id, subnet-id, security-group-id, keypair)
 
+Task 2 : Generate Presign url for an object, without making bucket publiccly accesable.
 
-
-
-
-
-
-
-
+Task 3 : Create index.html, error.html and upload it to s3 bucket...  While launcging instance, Pass "Userdata" to make instance as webserver.. and copy web content from s3 bucket to /var/www/html/ path.  the index.html should deliver as webpage.
 
 
 
