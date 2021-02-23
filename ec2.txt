@@ -536,11 +536,26 @@ Task 2 : Generate Presign url for an object, without making bucket publiccly acc
 
 Task 3 : Create index.html, error.html and upload it to s3 bucket...  While launcging instance, Pass "Userdata" to make instance as webserver.. and copy web content from s3 bucket to /var/www/html/ path.  the index.html should deliver as webpage.
 
+make sure you create a role and associate that role to ec2 instance.
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+aws s3 sync s3://bucketname/ /var/www/html/
+______________________________________________________________________________________
 
+D: 23/02/2021
 
+Systems Manager : 
+--> Resource Group
+--> run command
+--> Session Manager
 
+Task : Reset windows password using Ec2RescueTool.
 
+Task 2 : Install putty application to your ec2 instance without login.
 
+Task 3 : Make your existing Linux instance as webserver using systems manager.
 
 
 
