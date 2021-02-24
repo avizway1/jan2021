@@ -557,6 +557,36 @@ Task 2 : Install putty application to your ec2 instance without login.
 
 Task 3 : Make your existing Linux instance as webserver using systems manager.
 
+_____________________________________________________________________________________
+
+D: 24/02/2021
+
+Lightsail : SaaS
+
+Elastic Beanstalk : PaaS
+
+Placement groups : 
+	--> Cluster PG
+	--> Partition PG
+	--> Spread PG
+
+--> We cannot merge PG.
+--> with in env, pg must be unique
+--> Choos pg while launching the instance.
+--> Cluster PG, can't span across Multiple AZs.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

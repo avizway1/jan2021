@@ -1,0 +1,37 @@
+Per Month 0.50$ / HostedZone
+
+Route53: AWS DNS Service..
+DNS : Domain Naming Service/system : Resolves Names to Ips and vice versa..
+
+Domain names maps with Public IP addresses using DNS service.
+
+google.com --> 216.58.196.174
+
+Where to get the domain name .?
+Domain Registrers.. Godaddy, bigrock, web.com, aws r53..!!!
+
+ICANN : domain uniqueness
+IANA : RootZone database.. : .com , .in
+
+TLD :Top level domains : .com, .in, .org
+SLD : second level domain : .co.in, .gov.in
+
+_____
+
+freenom.com		--> Free Domain name.
+
+
+NS : Name Server records : 
+SOA : Start of Authority records : zone admin info
+
+Grab the Name server records and Configure thise at Domain Registrer..!!!!
+
+
+ip address 
+elb.ahfjshfjsgdh.ap-south-1.amazonaws.com	--> avinash.com
+
+
+
+
+
+
