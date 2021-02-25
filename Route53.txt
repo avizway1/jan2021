@@ -30,6 +30,36 @@ Grab the Name server records and Configure thise at Domain Registrer..!!!!
 ip address 
 elb.ahfjshfjsgdh.ap-south-1.amazonaws.com	--> avinash.com
 
+_______________________________________________________________________________________
+
+D: 25/02/2021
+
+RP : 
+
+A Record : Address Record : IP <--> Address
+Alias Record : AWS own recored.. Track changes happening on aws resources. In AWS, We always use A + Alias record.
+
+
+Simple RP :
+Weighted RP : The weight can be a number between 0 and 255. If you specify 0, Route 53 stops responding to DNS queries using this record.
+	--> pilot light :   &   --> Blue and green Deployment :  
+
+Geolocation RP :
+Failover RP :
+Latency RP :
+Multivalue answer RP :
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
