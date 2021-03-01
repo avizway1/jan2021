@@ -64,7 +64,7 @@ IPv4 is a 32 bit.. /32 represents 32 filled boxes..  /31 = 32-31 = 1 --> 2^1
 
 2^0	2^1	2^2	2^3	2^4	2^5	2^6	2^7	2^8	2^16 .. 2^32
 
-1	2	4	8	16	32	64	128	256	65536	4M
+1	2	4	8	16	32	64	128	256 	65536	4M
 
 Usable Count			11	27	59	123	251	65531	 
 
@@ -82,5 +82,46 @@ Private Subnet : Non Internet facing resources..!!
 
 https://www.davidc.net/sites/default/subnets/subnets.html
 
+______________________________________________________________________________________
 
+D: 01/03/2021
+
+Can we increase/modify VPC CIDR..?? NO..!!!
+
+Step 1 : Create a VPC..  VPC Name : CustomVPC, CIDR : 192.168.0.0/16 
+
+(Along with VPC, A Default SG , NACL, Default Route Table creates automatically..!!)
+
+Step 2 : Create Subnets within the CustomVPC.
+
+Public SUbnet : ap-south-1a : 192.168.252.0/23 : 507
+Private SUbnet : ap-south-1b : 192.168.254.0/23 : 507
+
+Step 3 : Create an InternetGateway (IGW) and Associate with VPC.
+
+(One VPC can have only one IGW)
+
+Step 4 : Create ROute Tables and add routes, and perform subnet association.
+
+Public Route : Add a route 0.0.0.0/0 --> IGW (InternetGateway), Navigate to Subnet Association, Select "PublicSubnet"
+
+Private Route : Navigate to Subnet association , Select "Private SUbnet"
+
+
+Step 5 : (Optional Step) : Navigate to Subnets, Choose "Public SUbnegt", actions, Modify auto assign publi ip settings, ENable it.
+
+
+Jump Server / Bastian Host : A dedicated ec2 instance, runs in CustomVPC public SUbnet.. Used to connect to private SUbnet ec2 instances.
+
+NAT Gateway : Provide internet to Private subnet instances. 
+
+Task : Create 2 Public Subnets and 2 Private Subnets (ap-south-1a with 1 Public and 1 Private.. Ap-south-1b with 1 pub and 1 private)..
+
+
+
+
+
+
+
+ 
 
