@@ -94,6 +94,7 @@ Step 1 : Create a VPC..  VPC Name : CustomVPC, CIDR : 192.168.0.0/16
 
 Step 2 : Create Subnets within the CustomVPC.
 
+--
 Public SUbnet : ap-south-1a : 192.168.252.0/23 : 507
 Private SUbnet : ap-south-1b : 192.168.254.0/23 : 507
 
@@ -116,6 +117,55 @@ Jump Server / Bastian Host : A dedicated ec2 instance, runs in CustomVPC public 
 NAT Gateway : Provide internet to Private subnet instances. 
 
 Task : Create 2 Public Subnets and 2 Private Subnets (ap-south-1a with 1 Public and 1 Private.. Ap-south-1b with 1 pub and 1 private)..
+
+_______________________________________________________________________________________
+
+D: 02/03/2021
+
+NAT Gateway : Provide internet to Private subnet instances.  (NO FREE TIER ELIGIBILITY)
+--> NAT Always runs in customVPC public Subnet.
+--> Designed to provide internet to Private subnet resources.
+--> Edit the "RouteTables" accordingly.
+
+NAT Instance : FREE TIER
+--> Dedicated ec2 instance designed to perform NAT operationg.
+--> NAT Instance also runs in "CustomVPCs" "Public Subnet".
+--> Need to takes care about the security groups (http and https must be opened for everyone)
+--> Source/Destination check must be disable.
+--> If internet is throttle/bottleneck, We need to increase the instance config.
+
+__
+
+FlowLogs : Logs at VPC level.	 Stores logs in S3 bucket / Cloudwatch Logs group.
+--> VPC Level
+--> Subnet Level
+--> Instance Level
+
+NACL : 
+--> Security Groups won't deny the traffic.  We have only Allow.
+--> SG is stateful (We need to take care only inbound traffic).
+--> SG works at Instance Level.
+
+--> NACLs are Stateless (We need to takes care about Inbound also outbound)
+--> We can allow/Deny the traffic.
+--> NACLs works at Subnet Level.
+--> We need to open Ephemeral ports (AWS Manadated this). (1024-65535)
+--> Newly creted NACL deny all the traffic.
+
+--> Lowest rule number always haves highest priority.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
