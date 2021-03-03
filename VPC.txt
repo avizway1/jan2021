@@ -155,6 +155,54 @@ NACL :
 --> Lowest rule number always haves highest priority.
 
 
+_____________________________________________________________________________________
+
+D: 03/03/2021
+
+
+VPC Peering : Designed to enable communication between multiple VPCs.
+--> VPC have NonTransitive peering. 
+
+cidr		Requester CIDR 			Accepter CIDR
+Account no	Account 1 no			Account 2 no
+VPC ID		acc 1 vpc id			acc 2 vpc id
+
+In both accounts, We need to modify the RouteTables accordingly.
+
+
+cidr		Requester CIDR 			Accepter CIDR
+		192.168.0.0/16			172.31.0.0/16
+Account no	same				same
+VPC ID		vpc-0a097d33176c07d48		vpc-0c84f896a6c0bb6fe
+
+
+
+______
+
+Endpoints : When we don't have internet to private subnet instances.. But you want to access any of the AWS service (S3 / DynamoDB), Then we can use Endpoitns..
+pl (Private Link)
+
+
+IPv4 : To get internet for Private subnet instances, we can use "NAT Gateway/Instance"
+IPv6 : To get internet for private subnet instances, we can use "Egress Only Internet Gateway".
+
+
+________
+
+https://www.youtube.com/watch?v=xyLlMBHy2wc
+
+
+DHCP : Dynamic host configuration protocol
+
+
+
+
+
+
+
+
+
+
 
 
 
