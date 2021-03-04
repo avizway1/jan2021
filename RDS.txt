@@ -1,0 +1,55 @@
+RDS : Relational Database Service
+--> Data stores in tabular format.
+
+--> Amazon Aurora  : Mysql compatable & PostGreSQL compatable : Mysql workbench / Pgadmin
+--> Mysql	   : Mysql Workbench
+--> Microsoft SQL  : SSMS (Sql server management studio)
+--> PostGreSQL	   : PgAdmin
+--> MariaDB	   : Workbench
+--> Oracle	   : Orcle native, TOAD
+
+--> NoSQL DB : Data stores in JSON format. : Serverless
+	--> DynamoDB
+
+--> Caching : 
+	--> Elasticache : supports 2 caching engines
+		--> Memcached
+		--> Redis
+
+--> Datawarehousing solution 
+	--> Amazon Redshift
+
+--> Database Migration : DMS : Database Migration service
+
+
+--> We cannot get connect and see what is happening at OS level.
+--> We always run our WEB Servers and Database Servers in PRIVATE SUBNET.
+--> Public Access : NO
+--> We use Jump server to connect to DB instances. 
+--> Whenever we perform any major modification, RDS creates a backup copy automatically.
+
+Backup retention : It keeps last 7 days backup copies. 
+
+--> For RDS instance, we will get an Endpoint, not an IP Address. 
+
+
+Task : Launch Mysql Databse in CustomVPC's Private SUbnet. Launch Jump server in customVPC public SUbnet, install Mysql Workbench then connect to the RDS DB.
+*Make sure you follow Security group standards as we discussed.
+
+Task : Launch MSsql Databse in CustomVPC's Private SUbnet. Launch Jump server in customVPC public SUbnet, install SSMS (Sql server management studio) then connect to the RDS DB.
+*Make sure you follow Security group standards as we discussed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
