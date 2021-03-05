@@ -36,8 +36,34 @@ Backup retention : It keeps last 7 days backup copies.
 Task : Launch Mysql Databse in CustomVPC's Private SUbnet. Launch Jump server in customVPC public SUbnet, install Mysql Workbench then connect to the RDS DB.
 *Make sure you follow Security group standards as we discussed.
 
-Task : Launch MSsql Databse in CustomVPC's Private SUbnet. Launch Jump server in customVPC public SUbnet, install SSMS (Sql server management studio) then connect to the RDS DB.
-*Make sure you follow Security group standards as we discussed.
+________________________________________________________________________________________
+
+D: 05/03/21
+
+MultiAZ Deployment :
+--> create a standby instance in Another AZ.
+--> We will get same enedpoint for both the instances.
+--> Multi-AZ is for DR (Disaster Recovery) purpose only.
+--> Not for scaling purpose.
+
+
+ReadReplica : 
+--> RR Designed for scaling purpose.
+--> We can offload the read operations from master copy to replica copies.
+--> We can create 5 Mysql replicas, 15 aurora replicas.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
