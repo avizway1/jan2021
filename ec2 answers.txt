@@ -1,0 +1,21 @@
+1.	D		
+2.	D	
+3.	B		
+4.	A & B		
+5.	A & C
+6.	D
+7.	B		 
+8.	B		
+9.	C		
+10.	C		
+11.	C 	
+12.	B & C 	
+13.	C
+14.	C 
+15.	Duplicate Question.
+16.	B 
+17.	C 
+18.	B
+19.	D
+20.	C
+21.	C

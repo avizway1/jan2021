@@ -53,6 +53,55 @@ ReadReplica :
 --> We can create 5 Mysql replicas, 15 aurora replicas.
 
 
+_____________________________________________________________________________
+D: 08/03/2021
+
+Snapshots : Backup copy of our RDS instance. 
+--> Point-in-time-recovery
+--> It's not an Inplace restoration.
+
+System Backups/Automated backups : Backup copies created by AWS. We cannot delete these backups.
+--> Based on "Backup Retention" value we will get these Automated backups.
+--> When we delete instance, these backups delete.
+--> Min backup retention period : 1 Day / Defualt 7 days / Max 35 Days
+
+Manual Backups : We need to crete manual backups. 
+--> WOn;t delete along with rds instance.
+--> We can share this snapshot to another region / We can share to another aws account also.
+
+--> Percona Xtra Backup is an 3rd party backup software, we can integrate with s3.
+
+Elasticache : It's a caching service for our RDS instances.
+--> Duplicated requests execuiting on RDS instance, will be delovered by this service.
+--> It supprts 2 open source caching engines.
+	--> MemcacheD
+	--> Redis (it's own authentication RedisAUTH,, MultiAZ failover)
+
+
+
+DMS : Database Migration Service : 
+
+Homogenious migration : If source and destination contains same db engine. (mysql --> mysql)  Source --> DMS --> Destination
+Heterogenious migration : If source and destination contains differnt db engine. (db3 --> mysql)	Source --> DMS --> SCT (Schema Convertion tool) --> Destination	
+
+https://www.youtube.com/watch?v=iRhJDGp-ew8
+
+
+Task : Launch RDS instance 1 in Default VPC, and restore the shared database to the RDS instance 1.
+
+Launch another RDS instance 2 in CUstom VPC and keep it with no data.
+
+Launch DMS instance, Create Source, destinations and Create a replication job.
+--> Once job is completed, you should able to see all the data in RDS inatnce 2.
+
+
+
+
+
+
+
+
+
 
 
 
