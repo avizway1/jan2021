@@ -1,0 +1,20 @@
+ACM : Generate SSL/TLS certificate and apply on our elb then configure elb Dns name with domain name in route 53. Add virtual path to apache configu/nginx config.. 
+
+
+Task : Add http to https redirection to your RDS Task infra.
+
+https://www.youtube.com/watch?v=93ekvcpzs1o
+
+https://raw.githubusercontent.com/avizway/redirection/master/httptohttps
+
+
+
+
+
+
+
+
+
+
+
+

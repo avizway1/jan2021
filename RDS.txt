@@ -95,9 +95,21 @@ Launch DMS instance, Create Source, destinations and Create a replication job.
 --> Once job is completed, you should able to see all the data in RDS inatnce 2.
 
 
+_____________________________________________________________________________________
 
+D: 09/03/2021
 
+DynamoDB : 
+--> Dynamodb is a serverless architecture.
+--> We can start creating our Db tables.
+--> Single digit millisecond latency at any scale.
 
+Task : https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
+
+DAX : DynamoDB Accelerator : In-Memory caching for our Dynamodb table.
+
+SQL : Data stores in Table format. 
+NoSQL : Data stores in JSON format.  (Key and Value)
 
 
 
