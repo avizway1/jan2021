@@ -8,6 +8,123 @@ https://www.youtube.com/watch?v=93ekvcpzs1o
 https://raw.githubusercontent.com/avizway/redirection/master/httptohttps
 
 
+_______________________________________________________________________________________
+
+D: 10/03/2021
+
+Cloudtrail : Enabled by default.. It stores last 90 days activities. 
+--> We need to create a trail and store it in s3 bucket for unlimited days.
+
+Management events : Capture management operations performed on your AWS resources.
+Data events : Log the resource operations performed on or within a resource. (s3 & lambda)
+Insights events : Identify unusual activity, errors, or user behavior in your account.
+
+--> Your org aws account need to inspect by external 3rd party org, How you provide access to all the logs.!!
+--> enable logging on all the aws accounts store all the logs in a centralised AWS account bucket.. Provide access on that bucket to external aditor.
+
+
+AWS Config : We can get resource compliance information and timelines using the config.
+** NO FREE TIER ELIGIBILITY
+--> Inventory of our aws resources. We will get timeline of the resource (what happen, when happen, who did)
+--> We can define "Compliant" and "nonCompliant" resources based on Org standards.
+
+
+AWS Trusted Advisor : AWS provide advises on security, FT, HA, COst..!!
+
+Cost Optimization
+Performance
+Security
+Fault Tolerance
+Service Limits
+
+Based on Support plan, we will get advises. 
+For basic and Developer : 7 core area checks
+Business and enterprise : all checks
+
+__
+
+AWS Inspector : **No FREE TIER ELIGIBILITY
+
+CIS : Center for Internet Security : They define standards for every OS.
+
+--> Every ec2 instance should have an Inspector agent. THis agent perform the Assesments. 
+
+
+
+
+Application Service :
+_____________________
+
+--> SQS : Simple Queue Service 
+
+--> SQS is Poll/pull based messeging service.
+--> Max msg size SQS supports : 256 kb only
+--> AWS cost us based on chunks (1 chunk = 64 kb)
+
+msg = 100 kb = 2 sqs req
+msg = 60 kb = 1 sqs req
+msg = 250 kb = 4 sqs req
+
+--> Max msg retention period = 14 days
+--> We can configure dead-letter queue for undelivered messeges.
+
+
+SNS : Push based msg service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
