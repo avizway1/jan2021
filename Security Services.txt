@@ -49,6 +49,38 @@ CIS : Center for Internet Security : They define standards for every OS.
 
 --> Every ec2 instance should have an Inspector agent. THis agent perform the Assesments. 
 
+____________________________________________________________________________________
+D: 11/03/2021
+
+CloudFront : 
+
+How to clear the cache from cloudfront distribution.
+--> Invalidation
+
+geo location restrictions : 
+
+
+WAF : Web Application Firewall : 
+--> We can enable WAF with Cloudfront / ALB (application load balancer).
+
+AWS Shiled : Designed to protect resources from DDoS attack.
+
+AWS shield + Cloudfront + Autoscaling group  = protection from DDoS Attack
+
+
+Task : Launch existing task with cloudfront.
+
+Task : Launch an ec2 instance, make it as webserver, Launch ELB, add ec2 to elb, test the output... Create a cloudfront to deliver ELB website via cloudfront.
+
+
+
+
+
+
+
+
+
+
 
 
 
