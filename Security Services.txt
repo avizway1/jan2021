@@ -103,6 +103,63 @@ msg = 250 kb = 4 sqs req
 
 SNS : Push based msg service.
 
+________________________________________________________________________________________
+
+D: 12/03/2021
+
+lambda :
+--> Serveless architecture.
+--> code run duration, requests, memory configuration.
+--> Java, .net core, python, node.js, ruby, go lang
+
+blueprint : Canary function
+
+How to increase the configuration of lambda function.?
+
+From labda, how to access other aws resources.
+
+Can we run lambda with in VPC.?
+YES.. Add "AWSLambdaVPCAccessExecutionRole" must be added, then only we can run the lambda function with in a vpc.
+
+____________________________________________
+
+Cloudformation : 
+--> We can create a stack for any of the resource. Deploy the stack and we will get the resources.
+
+IaC : infrastructure as Code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
