@@ -128,10 +128,52 @@ Cloudformation :
 
 IaC : infrastructure as Code
 
+______________________________________________________________________________________
+
+D: 15/03/2021
 
 
+cloudendure : https://aws.amazon.com/cloudendure-migration/
+
+https://console.cloudendure.com/#/register/register
+
+anywhere / GCP to AWS : https://www.youtube.com/watch?v=8xf1RpPdcHs
+Azure to AWS : https://www.youtube.com/watch?v=bdaHMRqCBkg
+vmware/hyper-v : https://www.youtube.com/watch?v=Vx9lRRY-shg
+
+Storage Gateway : https://www.youtube.com/watch?v=wmcBSHpoHhs
+
+DevOps on AWS : Jenkins and Git
+
+git clone
+git add .
+git commit -m "messege"
+git push
+git status
+git checkout -b "branch name"
+git checkout benachname
+
+Jenkins : CICD 
+
+_________________
 
 
+code pipeline 
+
+codecommit/s3/git/bitbucket
+	|
+	|
+	V
+Code build / Jenkins / Cruise CI
+	|
+	|
+	V
+Beanstalk/ ECS / S3 / Service catalog
+
+
+Developers use AWS own IDE : Cloud9
+
+https://github.com/avizway1/aws-codepipeline-s3-codedeploy-linux
 
 
 
