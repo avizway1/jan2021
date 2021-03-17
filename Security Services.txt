@@ -175,6 +175,96 @@ Developers use AWS own IDE : Cloud9
 
 https://github.com/avizway1/aws-codepipeline-s3-codedeploy-linux
 
+_______________________________________________________________________________________
+
+D: 16/03/2021
+
+Cloud9 : IDE on AWS
+
+cdk : Cloud Development kit : 
+
+To have cdk in local environment
+--> Install node.js	(node --version)
+--> npm install -g aws-cdk	(install cdk) (cd --version)
+
+typescript
+python
+.net
+java
+
+`npm run build`   compile typescript to js
+ * `npm run watch`   watch for changes and compile
+ * `npm run test`    perform the jest unit tests
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk synth`       emits the synthesized CloudFormation template
+
+
+AWS Developers Workshop : https://cdkworkshop.com/
+
+______________
+
+AWS Fargate : AWS own container
+
+
+push --> ECR (Repo of docker images)
+
+
+https://containersfromthecouch.com/
+
+https://ecsworkshop.com/
+https://eksworkshop.com/
+
+
+
+How to monitor your ec2 instance memory usage..!!!
+Custom Cloudwatch metric :  https://www.youtube.com/watch?v=Fe2mEkWiNSA
+
+Cross Account access : https://www.youtube.com/watch?v=sZiiB4yF0VY
+
+
+AD COnfiguration : https://www.youtube.com/watch?v=RDlBoAHVmZs
+AD Connector 	: https://www.youtube.com/watch?v=Ca259gg6SoM
+Add Linux instance to directory : https://www.youtube.com/watch?v=LWi9-XL2vWQ
+
+
+Redshift, AWS Organisations, TCO/pricing..
+
+________________________________________________________________________________________
+
+D: 17/03/2021
+
+
+https://calculator.aws/
+
+TCO : Total cost of Ownership : 
+
+
+Datawarehousing solution : Redshift
+https://s3.amazonaws.com/solutions-reference/data-lake-solution/latest/data-lake-solution-on-aws.pdf
+
+Data Processing for Bigdata : EMR (Elastic Map Reduce)
+
+__________
+
+AWS Organisations : 
+
+Master : SSO is enabled. 
+
+
+SCP : Service Conrol Policy : 
+
+
+Secrets Manager : 
+username and password in the code : No Hardcoading to store un and pwd for RDS instances. 
+
+Centralised securty monitoring : Security Hub
+
+https://security-hub-workshop.awssecworkshops.com/
+
+
+
+
 
 
 
